@@ -1,0 +1,23 @@
+""" La secuencia de Collatz se define de la siguiente manera:
+Si el número n es par, el siguiente número es n / 2.
+Si el número n es impar, el siguiente número es 3n + 1.
+Se repite este proceso hasta llegar a 1. """
+# Pide al usuario que ingrese un número entero positivo.
+# Muestra en pantalla la secuencia de Collatz generada.
+# Cuenta y muestra cuántos pasos tomó llegar al 1.
+numero=int(input("Ingrese un número positivo: "))
+secuencia=[]
+secuencia.append(numero)
+while(numero != 1):
+    if(numero<=0):
+        print("el numero debe ser positivo")
+        secuencia=[]
+        break
+    if (numero % 2 == 0):
+        secuencia.append(numero//2)
+        numero=(numero//2)
+    elif(numero % 2 != 0):
+        secuencia.append((numero * 3) + 1)
+        numero=((numero * 3) + 1)
+if(numero>0):
+    print("La secuencia es: ",secuencia)
