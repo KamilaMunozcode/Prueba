@@ -1,3 +1,4 @@
 numero=float(input("Ingrese un número positivo"))
-#if numero > 0
+print("Hola a todos")
+print("Hola y chao")
    
